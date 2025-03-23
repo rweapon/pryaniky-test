@@ -36,7 +36,7 @@ export default antfu(
       "fsd/no-ui-in-business-logic": "off",
       "fsd/no-global-store-imports": "off",
       "fsd/ordered-imports": "warn",
-    }
+    },
   },
   {
     files: ["**/*.{ts,tsx}"],

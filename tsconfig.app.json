@@ -15,16 +15,13 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["./src/*"],
       "@app/*": ["./src/1_app/*"],
       "@pages/*": ["./src/2_pages/*"],
       "@widgets/*": ["./src/3_widgets/*"],
-      "@features/*": ["./src/4_features/*"],
-      "@entities/*": ["./src/5_entities/*"],
-      "@shared/*": ["./src/6_shared/*"]
+      "@shared/*": ["src/4_shared/*"]
     },
     "resolveJsonModule": true,
-    "types": ["./src/6_shared/model/interfaces/vite-env.d.ts"],
+    "types": ["./src/4_shared/model/interfaces/vite-env.d.ts"],
     "allowImportingTsExtensions": true,
     /* Linting */
     "strict": true,

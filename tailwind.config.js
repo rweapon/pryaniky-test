@@ -19,7 +19,7 @@ export default {
       "2xl": "1536px",
     },
     fontFamily: {
-      sans: ["Montserrat", "sans-serif"],
+      sans: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {
