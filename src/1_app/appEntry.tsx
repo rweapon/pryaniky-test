@@ -1,4 +1,4 @@
-import "@app/index.css";
+import "@app/styles/index.css";
 import { appRouter } from "@app/appRouter";
 import AppProvider from "@app/providers/AppProvider";
 import { StrictMode } from "react";

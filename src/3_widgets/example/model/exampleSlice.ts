@@ -1,5 +1,5 @@
-import type { IExample } from "@entities/example/model/types";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import type { IExample } from "@widgets/example/model/types";
 
 import { createSlice } from "@reduxjs/toolkit";
 

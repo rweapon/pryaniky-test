@@ -1,7 +1,7 @@
 import { rootReducer } from "@app/appReducer";
-import { emptySplitApi } from "@entities/splitting";
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { emptySplitApi } from "@widgets/splitting";
 import { useDispatch, useSelector } from "react-redux";
 
 export const store = configureStore({
