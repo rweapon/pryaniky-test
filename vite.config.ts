@@ -41,7 +41,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          const HugeLibraries = ["@reduxjs", "react-dom"];
+          const HugeLibraries = ["@reduxjs", "react-dom", "@mui/material"];
           if (HugeLibraries.some(libName => id.includes(`node_modules/${libName}`))) {
             return id.toString().split("node_modules/")[1].split("/")[0].toString();
           }
