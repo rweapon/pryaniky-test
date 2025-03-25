@@ -1,0 +1,94 @@
+{
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "never"
+  },
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    {
+      "fixable": true,
+      "rule": "style/*",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-indent",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-spacing",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-spaces",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-order",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-dangle",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*-newline",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*quotes",
+      "severity": "off"
+    },
+    {
+      "fixable": true,
+      "rule": "*semi",
+      "severity": "off"
+    }
+  ],
+  "eslint.runtime": "node",
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml"
+  ],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.format.enable": true,
+  "pair-diff.patterns": [
+    {
+      "source": "./fixtures/output/**/*.*",
+      "target": "./fixtures/input/<base>"
+    }
+  ],
+  "editor.formatOnSave": false,
+
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "files.associations": { "*.css": "tailwindcss" },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
