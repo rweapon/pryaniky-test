@@ -1,6 +1,7 @@
 import type { BaseQueryFn, FetchArgs } from "@reduxjs/toolkit/query/react";
 
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { ApiPaths } from "@shared/model/configs";
 
 export type ICustomError = {
   data: {
@@ -10,17 +11,18 @@ export type ICustomError = {
 };
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "example.com",
-  // prepareHeaders: (headers, { getState }) => {
-  //   const token = (<RootState>getState()).auth.token;
-  //   if (token) {
-  //     headers.set("Authorization", `Bearer ${token}`);
-  //   }
-  //   return headers;
-  // },
+  baseUrl: ApiPaths.HOST + ApiPaths.PATH,
+  prepareHeaders: (headers) => {
+    const token = JSON.parse(localStorage.getItem("token") || "null");
+    if (token) {
+      headers.set("x-auth", token);
+    }
+    return headers;
+  },
 }) as BaseQueryFn<string | FetchArgs, unknown, ICustomError, object>;
 
 export const emptySplitApi = createApi({
+  reducerPath: "api",
   baseQuery,
   endpoints: () => ({}),
 });

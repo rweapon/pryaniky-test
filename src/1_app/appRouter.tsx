@@ -5,10 +5,16 @@ import { ErrorPage } from "@pages/Error";
 import { Home } from "@pages/Home";
 import { Login } from "@pages/Login";
 import { AppPaths } from "@shared/model/configs";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 const appPages: Record<AppPaths, RouteObject> = {
   [AppPaths.HOME]: { path: AppPaths.HOME, element: <Home /> },
+  [AppPaths.ALL]: { path: AppPaths.ALL, element: (
+    <Navigate
+      to={AppPaths.HOME}
+      replace
+    />
+  ) },
   [AppPaths.LOGIN]: { path: AppPaths.LOGIN, element: <Login /> },
 };
 

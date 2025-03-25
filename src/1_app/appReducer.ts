@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { exampleReducer } from "@widgets/example";
 import { emptySplitApi } from "@widgets/splitting";
+import { tableReducer } from "@widgets/table";
 
 export const rootReducer = combineReducers({
-  example: exampleReducer,
+  table: tableReducer,
   [emptySplitApi.reducerPath]: emptySplitApi.reducer,
 });

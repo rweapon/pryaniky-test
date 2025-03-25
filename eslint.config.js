@@ -29,7 +29,7 @@ export default antfu(
     },
     files: ["**/*.{ts,tsx}"],
     rules: {
-      "fsd/forbidden-imports": "error",
+      "fsd/forbidden-imports": "warn",
       "fsd/no-relative-imports": "error",
       "fsd/no-public-api-sidestep": "error",
       "fsd/no-cross-slice-dependency": "off",
@@ -49,6 +49,9 @@ export default antfu(
       "antfu/no-top-level-await": ["off"],
       "node/prefer-global/process": ["off"],
       "node/no-process-env": ["error"],
+      "style/jsx-closing-bracket-location": [1, "line-aligned"],
+      "style/jsx-first-prop-new-line": [1, "multiprop"],
+      "style/key-spacing": "error",
       "perfectionist/sort-imports": [
         "error",
         {

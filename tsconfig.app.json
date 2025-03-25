@@ -2,10 +2,10 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
+    "target": "ESNext",
 
     "jsx": "react-jsx",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "moduleDetection": "force",
     "useDefineForClassFields": true,
 
@@ -21,7 +21,7 @@
       "@shared/*": ["src/4_shared/*"]
     },
     "resolveJsonModule": true,
-    "types": ["./src/4_shared/model/interfaces/vite-env.d.ts"],
+    "types": ["./src/4_shared/model/types/vite-env.d.ts"],
     "allowImportingTsExtensions": true,
     /* Linting */
     "strict": true,

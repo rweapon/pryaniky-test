@@ -54,3 +54,25 @@
     --ring: 216 34% 17%;
   }
 }
+
+@layer base {
+  body {
+    @apply bg-background font-sans 
+  }
+
+  main {
+    @apply relative min-h-svh py-8 md:py-12
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  svg * {
+    @apply font-sans duration-300;
+  }
+
+  a {
+    @apply hover:duration-300 hover:opacity-70 not-italic;
+  }
+}
