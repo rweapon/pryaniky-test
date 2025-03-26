@@ -9,6 +9,7 @@ import Inspect from "vite-plugin-inspect";
 import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/pryaniky-test/",
   server:{
     allowedHosts: true
   },
