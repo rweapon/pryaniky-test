@@ -10,8 +10,8 @@ import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/pryaniky-test/",
-  server:{
-    allowedHosts: true
+  server: {
+    allowedHosts: true,
   },
   resolve: {
     alias: {
@@ -45,7 +45,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          const HugeLibraries = ["@reduxjs", "react-dom", "@mui/material"];
+          const HugeLibraries = ["@reduxjs", "react-router-dom", "@mui/material"];
           if (HugeLibraries.some(libName => id.includes(`node_modules/${libName}`))) {
             return id.toString().split("node_modules/")[1].split("/")[0].toString();
           }

@@ -4,7 +4,7 @@ import BaseLayout from "@app/layouts/BaseLayout";
 import { ErrorPage } from "@pages/Error";
 import { Home } from "@pages/Home";
 import { Login } from "@pages/Login";
-import { AppPaths } from "@shared/model/configs";
+import { AppPaths, BASE_PATH } from "@shared/model/configs";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 const appPages: Record<AppPaths, RouteObject> = {
@@ -24,4 +24,4 @@ export const appRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [appPages[AppPaths.HOME], appPages[AppPaths.LOGIN]],
   },
-]);
+], { basename: BASE_PATH });
